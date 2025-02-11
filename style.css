@@ -1,0 +1,153 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Use a modern sans-serif font */
+body {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  overflow: hidden;
+}
+
+/* Container styling */
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Message styling */
+.message {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Utility class to hide elements */
+.hidden {
+  display: none;
+}
+
+/* Fade-in animation class */
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+/* Modern button styling */
+.button {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff4081, #ff79b0);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin: 10px;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 64, 129, 0.4);
+}
+
+/* Dark Page styling */
+.dark-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 10;
+}
+
+.dark-message {
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Main content text styling */
+.content-text {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+/* Iframe styling */
+.content-iframe {
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Shatter overlay styling */
+.shatter-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: #fff;
+  opacity: 0;
+  z-index: 20;
+  animation: shatter 2s forwards, fadeOut 4s forwards 2s;
+  text-align: center;
+  padding: 20px;
+}
+
+.shatter-text {
+  max-width: 80%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes shatter {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05) rotate(2deg); }
+  100% { transform: scale(0.8) rotate(-5deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-text {
+    font-size: 1.2em;
+  }
+  .button {
+    font-size: 1em;
+    padding: 12px 25px;
+  }
+  .dark-message {
+    font-size: 1.5em;
+  }
+  .shatter-overlay {
+    font-size: 1.2em;
+  }
+}
