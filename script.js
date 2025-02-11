@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
       setTimeout(() => {
         darkPage.classList.add("hidden");
         showContent();
-      }, 1000);
+      }, 1000); // Wait for fade-out transition to complete
     }, 3000);
   }
 
@@ -38,10 +38,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.getElementById("finalBtn").addEventListener("click", function() {
     const shatterOverlay = document.getElementById("shatterOverlay");
-    shatterOverlay.classList.remove("hidden");
-
+    // Delay the shatter overlay to make sure it's shown last
     setTimeout(() => {
-      document.getElementById("contentSection").classList.add("hidden");
-    }, 500);
+      shatterOverlay.classList.remove("hidden");
+      setTimeout(() => {
+        document.getElementById("contentSection").classList.add("hidden");
+      }, 500);
+    }, 1000); // Delay it to appear after the main content is shown
   });
 });
