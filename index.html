@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine's Day Surprise</title>
+    <!-- Google Font for a modern look -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Initial Start Container -->
+    <div id="startContainer" class="container">
+      <button id="continueBtn" class="button">Continue</button>
+      <p id="message" class="message"></p>
+    </div>
+
+    <!-- Dark Page -->
+    <div id="darkPage" class="dark-page hidden">
+      <div class="dark-message">This is my life without you.</div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div id="contentSection" class="container hidden">
+      <p class="fade-in content-text">
+        Saffa, I wanted to take a moment to tell you how much you mean to me...
+      </p>
+      <iframe
+        class="fade-in content-iframe"
+        src="https://open.spotify.com/embed/playlist/0kQqB38xWelV2okAzPa4E6"
+        width="300"
+        height="380"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      ></iframe>
+      <button id="finalBtn" class="button fade-in">
+        Will you be my Valentine?
+      </button>
+    </div>
+
+    <!-- Shatter Overlay -->
+    <div id="shatterOverlay" class="shatter-overlay hidden">
+      <div class="shatter-text">
+        I suppose I was delusional enough to believe you would choose me over your
+        male friends...
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
