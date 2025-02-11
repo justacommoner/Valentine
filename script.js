@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const finalBtn = document.getElementById("finalBtn");
 
   continueBtn.addEventListener("click", function () {
+    console.log("Button clicked!");  // Add this log to see if the button is clicked
     clickCount++;
     const message = document.getElementById("message");
 
